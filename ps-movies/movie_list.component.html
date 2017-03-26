@@ -1,7 +1,27 @@
 <div>
-	<h3>{{ vm.message }}</h3>
-	<input type="text" name="message" ng-model="vm.message">
-	<button ng-click="vm.changeMessage()">
-		change message
-	</button>
+	<table class="table">
+		<tr>
+			<th>Title</th>
+			<th>Length</th>
+			<th>Rating</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="movie in vm.movies">
+			<th>{{movie.title}}</th>
+			<th>{{movie.length}}</th>
+			<th>
+				<movie-rating value="movie.rating"></movie-rating>
+			</th>
+			<th>
+				<div class="btn-group">
+					<button class="btn btn-default" ng-click="vm.upRating(movie)">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+					<button class="btn btn-default" ng-click="vm.downRating(movie)">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</div>
+			</th>			
+		</tr>
+	</table>
 </div>
