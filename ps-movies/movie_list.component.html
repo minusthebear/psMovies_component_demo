@@ -10,8 +10,7 @@
 			<th>{{movie.title}}</th>
 			<th>{{movie.length}}</th>
 			<th>
-				<movie-rating value="movie.rating">
-					<span class="glyphicon glyphicon-star"></span>
+				<movie-rating value="movie.rating" max="5">
 				</movie-rating>
 			</th>
 			<th>
@@ -22,7 +21,7 @@
 						<span class="glyphicon glyphicon-minus"></span>
 					</button>
 
-					<a ng-link="['Details', {id: movie.id}]" class="btn btn-default">
+					<a ng-link="['Details', {id: movie.id}, 'Overview']" class="btn btn-default">
 						<span class="glyphicon glyphicon-zoom-in"></span>
 					</a>
 					<!-- Option two instead of ng-link

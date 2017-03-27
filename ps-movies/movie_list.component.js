@@ -8,6 +8,11 @@
 		templateUrl: '/ps-movies/movie_list.component.html',
 		controllerAs: "vm",
 		controller: ["$http", controller]
+		/*
+		bindings: {
+			"$router": "<"
+		}
+		*/
 	});
 
 	function fetchMovies($http){
@@ -26,6 +31,7 @@
 
 		vm.$onInit = function(){
 			fetchMovies($http).then(function(movies){
+				console.log(movies);
 				vm.movies = movies;
 			})
 			.catch(function(data){
@@ -44,5 +50,12 @@
 				movie.rating -= 1;
 			}
 		}
+
+		// Option two for routing based on id
+
+		/*	vm.goTo = function(id){
+		 *		vm.$router.navigate(["Details", {id: id}]);
+		 *  }
+		 */
 	}
 })();
