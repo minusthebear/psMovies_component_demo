@@ -18,7 +18,8 @@
  		templateUrl: "/ps-movies/movie-rating.component.html",
  		bindings: {
  			value: "<",
- 			max: "<"
+ 			max: "<",
+ 			setRating: "&"
  		},
 
  		// We may use this by adding ng-transclude to the html
@@ -27,6 +28,8 @@
  		controllerAs: "vm",
  		controller: function(){
  			var vm = this;
+
+ 			
 
  			vm.$onInit = function(){
  				vm.entries = buildEntries(vm.value, vm.max);

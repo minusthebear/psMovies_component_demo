@@ -39,6 +39,10 @@
 			});
 		};
 
+		vm.setRating = function(movie, newRating){
+			movie.rating = newRating;
+		}
+
 		vm.upRating = function(movie){
 			if(movie.rating < 5){
 				movie.rating += 1;

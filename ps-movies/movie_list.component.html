@@ -10,7 +10,7 @@
 			<th>{{movie.title}}</th>
 			<th>{{movie.length}}</th>
 			<th>
-				<movie-rating value="movie.rating" max="5">
+				<movie-rating value="movie.rating" max="5" set-rating="vm.setRating(movie, value)">
 				</movie-rating>
 			</th>
 			<th>
@@ -34,4 +34,13 @@
 			</th>			
 		</tr>
 	</table>
+
+	<accordion>
+		<accordion-panel heading="Panel 1">
+			This is panel 1
+		</accordion-panel>
+		<accordion-panel heading="Panel 2">
+			This is panel 2
+		</accordion-panel>
+	</accordion>
 </div>
