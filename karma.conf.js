@@ -7,7 +7,6 @@ module.exports = function(config) {
         "bower_components/angular/angular.js",       
         "bower_components/angular-mocks/angular-mocks.js",
         "ps-movies/module.js",
-        "ps-movies/*.js",
         "ps-movies/**/*.js"
     ],
     exclude: [        

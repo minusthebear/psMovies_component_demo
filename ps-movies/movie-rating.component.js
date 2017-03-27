@@ -6,6 +6,7 @@
  		bindings: {
  			value: "<"
  		},
+ 		transclude: true,
  		controllerAs: "vm",
  		controller: function(){
  			var vm = this;
